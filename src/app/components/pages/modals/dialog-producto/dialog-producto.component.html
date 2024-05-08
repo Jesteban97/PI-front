@@ -18,7 +18,7 @@
             <mat-label>Categoria</mat-label>
             <mat-select formControlName="idCategoria">
               <mat-option *ngFor="let item of listaCategorias" [value]="item.idCategoria">
-                {{item.descripcion}}
+                {{item.nombre}}
               </mat-option>
             </mat-select>
           </mat-form-field>

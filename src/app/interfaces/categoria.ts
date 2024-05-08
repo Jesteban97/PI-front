@@ -1,4 +1,6 @@
 export interface Categoria {
   idCategoria: number,
-  descripcion:string
+  nombre:string,
+  esActivo?:boolean,
+  fechaRegistro?:string
 }
