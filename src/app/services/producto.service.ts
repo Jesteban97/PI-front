@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Producto } from '../interfaces/producto';
 import { ResponseApi } from '../interfaces/response-api';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
-  apiBase: string = '/api/producto/'
+  apiBase: string = `${environment.endpoint}/producto/`;
   constructor(private http: HttpClient) {
   }
 

@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ResponseApi } from '../interfaces/response-api';
 import { Venta } from '../interfaces/venta';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VentaService {
-  apiBase: string = '/api/venta/'
+  apiBase: string = `${environment.endpoint}/venta/`;
   constructor(private http: HttpClient) { }
 
  registrar(request: Venta): Observable<ResponseApi> {
