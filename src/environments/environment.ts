@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  endpoint:"https://backpi1.azurewebsites.net/api/"
+  endpoint:"https://sistemaventaspi2.somee.com/api/"
 };
 
 /*
