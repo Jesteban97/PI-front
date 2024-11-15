@@ -31,16 +31,28 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
     this.loading = true;
-
+  
     const _login: Login = {
       correo: this.formLogin.value.email,
       clave: this.formLogin.value.password,
     };
-
+  
     this._usuarioServicio.iniciarSesion(_login).subscribe({
       next: (data) => {
         if (data.status) {
-          this.router.navigate(['pages']);
+          // Verificar si se requiere 2FA y si el código está presente
+            if (data.value.twoFactor) {
+              // Redirigir a pantalla de ingreso de código desde la app autenticadora
+              this.router.navigate(['two-factor-code'], { 
+                queryParams: { email: _login.correo } 
+              });
+            } else {
+              // Redirigir a pantalla para mostrar QR y permitir ingreso manual del código
+              this.router.navigate(['two-factor-setup'], { 
+                queryParams: { email: _login.correo } 
+              });
+            }
+          
         } else {
           this._snackBar.open('No se encontraron coincidencias', 'Oops!', {
             duration: 3000,
@@ -48,11 +60,12 @@ export class LoginComponent implements OnInit {
         }
       },
       error: (e) => {
-        this._snackBar.open('hubo un error', 'Oops!', { duration: 3000 });
+        this._snackBar.open('Hubo un error', 'Oops!', { duration: 3000 });
       },
       complete: () => {
         this.loading = false;
       },
     });
   }
+  
 }

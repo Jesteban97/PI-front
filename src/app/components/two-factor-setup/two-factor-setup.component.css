@@ -1,0 +1,62 @@
+/* body para centrar el contenido */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Tarjeta de login */
+  .loginCard {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Encabezado de la tarjeta */
+  .header {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Campos de entrada */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Botón full-width para que ocupe el 100% del ancho */
+  .full-width {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para el progress bar */
+  mat-progress-bar {
+    margin-top: 20px;
+  }
+  
+  /* Personaliza el texto de los labels */
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Enlace en la tarjeta si fuera necesario */
+  a {
+    color: #1e88e5;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

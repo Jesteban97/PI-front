@@ -1,0 +1,18 @@
+<div class="body">
+    <mat-card class="loginCard">
+      <div class="header">
+        <h2>Ingresa el Código de Autenticación</h2>
+      </div>
+      <mat-card-content style="padding-bottom: 15px;">
+        <form [formGroup]="codeForm" (ngSubmit)="onSubmit()">
+          <label for="codigo">Código de autenticación:</label>
+          <input type="text" id="codigo" formControlName="codigo" placeholder="Código de autenticación" class="input-field" />
+          <button type="submit" mat-raised-button color="primary" [disabled]="codeForm.invalid" class="full-width">Validar</button>
+        </form>
+      </mat-card-content>
+      <mat-card-footer>
+       
+      </mat-card-footer>
+    </mat-card>
+  </div>
+  

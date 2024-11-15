@@ -1,0 +1,22 @@
+<div class="body">
+    <mat-card class="loginCard">
+      <div class="header">
+        <h2>Configura Autenticación en 2 Pasos</h2>
+      </div>
+      <mat-card-content style="padding-bottom: 15px;">
+        <div *ngIf="imgQR">
+          <h3>Escanea este código QR con tu autenticador</h3>
+          <div [innerHTML]="imgQR"></div>
+        </div>
+        <div>
+          <label for="codigo">Ingresa el código del autenticador:</label>
+          <input type="text" id="codigo" [(ngModel)]="codigo" placeholder="Código de autenticación" class="input-field" />
+          <button (click)="validarQRCode()" mat-raised-button color="primary" [disabled]="!codigo" class="full-width">Validar</button>
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+       
+      </mat-card-footer>
+    </mat-card>
+  </div>
+  

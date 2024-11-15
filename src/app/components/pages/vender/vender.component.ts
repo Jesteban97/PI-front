@@ -9,7 +9,7 @@ import { VentaService } from '../../../services/venta.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogResultadoVentaComponent } from '../modals/dialog-resultado-venta/dialog-resultado-venta.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 @Component({
@@ -120,6 +120,7 @@ export class VenderComponent implements OnInit {
       
 
       const ventaDto: Venta = {
+
         tipoPago: this.tipodePago,
         totalTexto: String(this.totalPagar.toFixed(2)),
         detalleVenta: this.ELEMENT_DATA

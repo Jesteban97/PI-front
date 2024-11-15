@@ -45,7 +45,7 @@
 
 
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content class="sidenav-content">
     <mat-toolbar color="primary">
       <button type="button"
               aria-label="Toggle sidenav"
@@ -55,6 +55,7 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span class="example-spacer"></span>
+      <span>Bienvenido, {{ usuarioActual?.nombreCompleto }}</span>
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
                routerLink="/login">
         <mat-icon>logout</mat-icon>
