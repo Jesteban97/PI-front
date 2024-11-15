@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  //endpoint:"https://sistemaventaspi2.somee.com/api"
-  endpoint:"http://localhost:5042/api"
+  endpoint:"https://sistemaventaspi2.somee.com/api"
+  //endpoint:"http://localhost:5042/api"
 };
 
 /*
